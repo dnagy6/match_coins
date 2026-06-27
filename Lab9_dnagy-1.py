@@ -41,6 +41,13 @@ def main():
         print(f"\n{player1.get_name()} has {player1.get_wallet()} coins.")
         print(f"{player2.get_name()} has {player2.get_wallet()} coins.\n")
 
+        if player1.get_wallet() == 0:
+            print(f"Game Over! {player1.get_name()} is out of coins.")
+            break
+        elif player2.get_wallet() == 0:
+            print(f"Game Over! {player2.get_name()} is out of coins.")
+            break
+
         play_again = input("Do you want to toss the coins again? (y/n): ").lower()
 
     print("\n--- Final Score ---")
